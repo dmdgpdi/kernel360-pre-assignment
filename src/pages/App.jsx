@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import { Smile } from 'lucide-react';
 import { styled } from 'styled-components';
 
@@ -11,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <Smile></Smile>
         <CustomP>
           Edit <code>src/App.js</code> and save to reload.
