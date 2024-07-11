@@ -1,8 +1,9 @@
 import { Smile } from 'lucide-react';
 import { styled } from 'styled-components';
+import { theme } from 'theme';
 
 const CustomP = styled.p`
-  color: red;
+  color: ${(props) => props.theme.color.mainBlue};
 `;
 
 function App() {
