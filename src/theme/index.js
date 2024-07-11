@@ -44,3 +44,4 @@ const theme = Object.freeze({
 });
 
 export { theme, fontSize, fontWeight, color, spacing };
+export { GlobalStyle } from 'theme/GlobalStyle';
