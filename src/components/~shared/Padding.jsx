@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const getPadding = (paddingList) => {
-  switch (paddingList.length) {
+  switch (paddingList?.length ?? 0) {
     case 1:
       return `${paddingList[0]}px`;
     case 2:
