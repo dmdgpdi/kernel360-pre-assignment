@@ -15,8 +15,8 @@ function CarBannerCard({ backgroundColor, title, text, imageUrl }) {
 
   return (
     <Card width={640} height={360} backgroundColor={backgroundColor}>
-      <ZIndex zIndex={1}>
-        <Padding padding={[24]}>
+      <Padding padding={[24]}>
+        <ZIndex zIndex={1}>
           <Flex justify={'space-between'}>
             <div>
               <Card.Title
@@ -47,8 +47,8 @@ function CarBannerCard({ backgroundColor, title, text, imageUrl }) {
           >
             Rental Car
           </Button>
-        </Padding>
-      </ZIndex>
+        </ZIndex>
+      </Padding>
       <Card.Image
         isBackground={true}
         imageUrl={imageUrl}
