@@ -4,3 +4,5 @@ export { Button } from 'components/~shared/Button';
 export { Text } from 'components/~shared/Text';
 export { Icon, IconWrapperButton, HeartButton } from 'components/~shared/icons';
 export { Card } from 'components/~shared/card';
+export { Flex } from 'components/~shared/Flex';
+export { ZIndex } from 'components/~shared/ZIndex';
