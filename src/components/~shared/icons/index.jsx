@@ -33,14 +33,14 @@ const IconWrapperButton = styled.button`
   cursor: pointer;
 `;
 
-function HeartButton() {
+function HeartButton({ isLiked }) {
   return (
     <IconWrapperButton>
       <Icon
         type={'heart'}
         size={fontSize.xl}
         color={color.alertRed}
-        isFill={true}
+        isFill={isLiked}
       />
     </IconWrapperButton>
   );
