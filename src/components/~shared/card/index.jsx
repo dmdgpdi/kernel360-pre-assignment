@@ -1,59 +1,50 @@
 import styled from 'styled-components';
-import { color } from 'theme';
+import { color, spacing } from 'theme';
 
 const CardLayout = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 304px;
-  height: 388px;
+  width: ${(props) => props?.width ?? 304}px;
+  height: ${(props) => props?.height ?? 388}px;
   border: 10px;
-  background-color: ${color.pureWhite};
-`;
-
-const CardBar = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  background-color: ${(props) => props?.backgroundColor ?? color.pureWhite};
 `;
 
 const CardTitle = styled.p`
-  width: 128px;
-  height: 24px;
-  line-height: 100%;
-  letter-spacing: -3%;
-  font-size: ${(props) => props.theme.fontSize.l}px;
-  font-weight: ${(props) => props.theme.fontWeight.bold};
-  color: ${(props) => props.theme.color.darkSlate};
-`;
-
-const CardText = styled.p`
-  height: ${(props) => props?.height ?? 20}px;
-  line-height: ${(props) => props?.height ?? 20}px;
-  font-size: ${(props) => props?.fontSize ?? props.theme.fontSize.s}px;
-  font-weight: ${(props) => props?.fontWeight ?? props.theme.fontWeight.bold};
-  color: ${(props) => props?.color ?? props.theme.color.lightSteel};
+  width: ${(props) =>
+    props?.width !== undefined ? `${props.width}px` : '100%'};
+  height: ${(props) =>
+    props?.height !== undefined ? `${props.height}px` : 'auto'};
+  line-height: ${(props) =>
+    props?.lineHeight !== undefined ? `${props?.lineHeight}px` : '100%'};
+  letter-spacing: -0.03em;
+  font-size: ${(props) => props.fontSize ?? props.theme.fontSize.l}px;
+  font-weight: ${(props) => props.fontWeight ?? props.theme.fontWeight.bold};
+  color: ${(props) => props?.color ?? props.theme.color.darkSlate};
 `;
 
 const CardImageLayout = styled.img`
   margin: auto;
+  position: ${(props) => (props.isBackground ? 'absolute' : 'relative')};
+  top: ${(props) => (props?.top !== undefined ? `${props.top}px` : 'auto')};
+  bottom: ${(props) =>
+    props?.bottom !== undefined ? `${props.bottom}px` : 'auto'};
+  left: ${(props) => (props?.left !== undefined ? `${props.left}px` : 'auto')};
+  right: ${(props) =>
+    props?.right !== undefined ? `${props.right}px` : 'auto'};
 `;
 
-function CardImage({ imageUrl, width }) {
-  return <CardImageLayout src={imageUrl} alt="" width={`${width}px`} />;
+function CardImage({ imageUrl, alt, width, ...props }) {
+  return (
+    <CardImageLayout src={imageUrl} alt="" width={`${width}px`} {...props} />
+  );
 }
 
-const CardHorizontalItem = styled.div`
-  display: flex;
-`;
-
 const Card = Object.assign(CardLayout, {
-  Bar: CardBar,
   Title: CardTitle,
-  Text: CardText,
   Image: CardImage,
-  HorizontalItem: CardHorizontalItem,
 });
 
 export { Card };
