@@ -10,8 +10,6 @@ import {
   Flex,
 } from 'components/~shared';
 
-// ,
-
 function CarInfoCard({
   name,
   type,
@@ -36,9 +34,9 @@ function CarInfoCard({
           </div>
           <HeartButton isLiked={isLiked} />
         </Flex>
-        <Gap size={32}></Gap>
+        <Gap size={8}></Gap>
         <Card.Image imageUrl={image} width={232} />
-        <Gap size={32}></Gap>
+        <Gap size={8}></Gap>
         <Flex justify={'space-between'}>
           <Flex>
             <Icon type={'fuel'} size={24} color={color.lightSteel} />
