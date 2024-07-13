@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-const Text = styled.p`
+const Text = styled.span`
+  display: block;
   width: ${(props) =>
     props?.width !== undefined ? `${props.width}px` : '100%'};
   height: ${(props) =>
