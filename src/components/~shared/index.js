@@ -8,3 +8,4 @@ export { Flex } from 'components/~shared/Flex';
 export { ZIndex } from 'components/~shared/ZIndex';
 export { Select } from 'components/~shared/Select';
 export { Input } from 'components/~shared/Input';
+export { Box } from 'components/~shared/Box';
