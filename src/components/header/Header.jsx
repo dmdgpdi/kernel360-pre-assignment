@@ -11,6 +11,7 @@ import {
   Input,
   IconWrapperButton,
   Button,
+  Container,
 } from 'components/~shared';
 
 function SearchBar() {
@@ -55,7 +56,7 @@ function SearchBar() {
 
 function Header() {
   return (
-    <Card width={1440} height={124}>
+    <Container width={1440} height={124}>
       <Padding padding={[40, 64]}>
         <Flex justify={'space-between'} align={'center'}>
           <Flex align={'center'}>
@@ -132,7 +133,7 @@ function Header() {
           </Flex>
         </Flex>
       </Padding>
-    </Card>
+    </Container>
   );
 }
 
