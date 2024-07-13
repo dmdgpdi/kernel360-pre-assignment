@@ -9,3 +9,5 @@ export { ZIndex } from 'components/~shared/ZIndex';
 export { Select } from 'components/~shared/Select';
 export { Input } from 'components/~shared/Input';
 export { Box } from 'components/~shared/Box';
+export { Container } from 'components/~shared/Container';
+export { Divider } from 'components/~shared/Divider';
