@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, spacing } from 'theme';
+import { color } from 'theme';
 
 const CardLayout = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ const CardLayout = styled.div`
   justify-content: center;
   width: ${(props) => props?.width ?? 304}px;
   height: ${(props) => props?.height ?? 388}px;
-  border: 10px;
+  border-radius: 10px;
   background-color: ${(props) => props?.backgroundColor ?? color.pureWhite};
 `;
 
@@ -23,6 +23,7 @@ const CardTitle = styled.p`
   font-size: ${(props) => props.fontSize ?? props.theme.fontSize.l}px;
   font-weight: ${(props) => props.fontWeight ?? props.theme.fontWeight.bold};
   color: ${(props) => props?.color ?? props.theme.color.darkSlate};
+  text-align: ${(props) => props?.textAlign ?? 'start'};
 `;
 
 const CardImageLayout = styled.img`

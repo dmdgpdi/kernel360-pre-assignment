@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heart, Fuel, Disc, UsersRound } from 'lucide-react';
+import { Heart, Fuel, Disc, UsersRound, ArrowDownUp } from 'lucide-react';
 import { fontSize, color } from 'theme';
 
 function Icon({ type, color = 'black', size = fontSize.xl, isFill = false }) {
@@ -18,6 +18,11 @@ function Icon({ type, color = 'black', size = fontSize.xl, isFill = false }) {
         <UsersRound size={size} color={color} fill={isFill ? color : 'none'} />
       );
     }
+    case 'arrowDownUp': {
+      return (
+        <ArrowDownUp size={size} color={color} fill={isFill ? color : 'none'} />
+      );
+    }
     default: {
       return null;
     }
@@ -25,10 +30,14 @@ function Icon({ type, color = 'black', size = fontSize.xl, isFill = false }) {
 }
 
 const IconWrapperButton = styled.button`
-  width: fit-content;
-  height: min-content;
+  width: ${(props) =>
+    props?.width !== undefined ? `${props.width}px` : 'fit-content'};
+  height: ${(props) =>
+    props?.height !== undefined ? `${props.height}px` : 'fit-content'};
   background: none;
+  background-color: ${(props) => props?.backgroundColor ?? 'none'};
   border: none;
+  border-radius: 10px;
   padding: 0;
   cursor: pointer;
 `;
