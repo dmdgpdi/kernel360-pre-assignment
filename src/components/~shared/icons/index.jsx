@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import { Heart, Fuel, Disc, UsersRound, ArrowDownUp } from 'lucide-react';
+import {
+  Heart,
+  Fuel,
+  Disc,
+  UsersRound,
+  ArrowDownUp,
+  Search,
+  SlidersHorizontal,
+  Bell,
+  Settings,
+} from 'lucide-react';
 import { fontSize, color } from 'theme';
 
 function Icon({ type, color = 'black', size = fontSize.xl, isFill = false }) {
@@ -23,6 +33,28 @@ function Icon({ type, color = 'black', size = fontSize.xl, isFill = false }) {
         <ArrowDownUp size={size} color={color} fill={isFill ? color : 'none'} />
       );
     }
+    case 'search': {
+      return (
+        <Search size={size} color={color} fill={isFill ? color : 'none'} />
+      );
+    }
+    case 'option': {
+      return (
+        <SlidersHorizontal
+          size={size}
+          color={color}
+          fill={isFill ? color : 'none'}
+        />
+      );
+    }
+    case 'bell': {
+      return <Bell size={size} color={color} fill={isFill ? color : 'none'} />;
+    }
+    case 'setting': {
+      return (
+        <Settings size={size} color={color} fill={isFill ? color : 'none'} />
+      );
+    }
     default: {
       return null;
     }
@@ -35,11 +67,14 @@ const IconWrapperButton = styled.button`
   height: ${(props) =>
     props?.height !== undefined ? `${props.height}px` : 'fit-content'};
   background: none;
-  background-color: ${(props) => props?.backgroundColor ?? 'none'};
-  border: none;
-  border-radius: 10px;
+  background-color: ${(props) => props?.backgroundColor ?? 'transparent'};
+  border: ${(props) => props?.border ?? 'none'};
+  border-radius: ${(props) => props?.radius ?? 0}px;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 function HeartButton({ isLiked }) {
