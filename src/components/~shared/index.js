@@ -6,3 +6,5 @@ export { Icon, IconWrapperButton, HeartButton } from 'components/~shared/icons';
 export { Card } from 'components/~shared/card';
 export { Flex } from 'components/~shared/Flex';
 export { ZIndex } from 'components/~shared/ZIndex';
+export { Select } from 'components/~shared/Select';
+export { Input } from 'components/~shared/Input';
