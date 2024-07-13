@@ -13,16 +13,28 @@ const Input = styled.input`
   letter-spacing: -0.02em;
   font-size: ${(props) => props.fontSize ?? props.theme.fontSize.xs}px;
   color: ${(props) => props?.color ?? props.theme.color.slateGray};
-  background-image: url(${ArrowDown});
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 14px;
 
   &::-webkit-calendar-picker-indicator {
     cursor: pointer;
     background: transparent;
     color: transparent;
   }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  *::-webkit-search-results-button,
+  *::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+
+  ${(props) =>
+    (props.type === 'date' || props.type === 'time') &&
+    `
+      background-image: url(${ArrowDown});
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 14px;
+    `}
 `;
 
 export { Input };
