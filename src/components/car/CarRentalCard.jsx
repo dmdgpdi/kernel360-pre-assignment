@@ -163,6 +163,7 @@ function CarRentalCard() {
         width={60}
         height={60}
         backgroundColor={color.mainBlue}
+        radius={4}
       >
         <Icon type={'arrowDownUp'} size={24} color={color.pureWhite} />
       </IconWrapperButton>

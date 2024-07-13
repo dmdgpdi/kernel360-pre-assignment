@@ -76,7 +76,7 @@ function CarInfoCard({
             </Flex>
           )}
 
-          <Button>Rent Now</Button>
+          <Button radius={4}>Rent Now</Button>
         </Flex>
       </Padding>
     </Card>

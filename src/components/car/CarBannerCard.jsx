@@ -44,6 +44,7 @@ function CarBannerCard({ backgroundColor, title, text, imageUrl }) {
             width={120}
             height={44}
             backgroundColor={buttonBackgroundColor}
+            radius={4}
           >
             Rental Car
           </Button>
