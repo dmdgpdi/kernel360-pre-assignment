@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export const BaseHeader = {};
+export const BasicHeader = {};
