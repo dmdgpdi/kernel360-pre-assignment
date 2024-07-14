@@ -157,7 +157,7 @@ function DropOffCard() {
 
 function CarRentalCard() {
   return (
-    <Flex justify={'space-between'} align={'center'}>
+    <Flex justify={'center'} align={'center'} gap={'44px'}>
       <PickUpCard />
       <IconWrapperButton
         width={60}

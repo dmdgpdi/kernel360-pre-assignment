@@ -8,6 +8,7 @@ import {
   Text,
   Button,
   Flex,
+  Box,
 } from 'components/~shared';
 
 function CarInfoCard({
@@ -27,15 +28,17 @@ function CarInfoCard({
     <Card>
       <Padding padding={[24]}>
         <Flex justify={'space-between'}>
-          <div>
+          <Flex direction={'column'}>
             <Card.Title>{name}</Card.Title>
             <Gap size={4}></Gap>
             <Text>{type}</Text>
-          </div>
+          </Flex>
           <HeartButton isLiked={isLiked} />
         </Flex>
         <Gap size={8}></Gap>
-        <Card.Image imageUrl={image} width={232} />
+        <Box width={248} height={200}>
+          <Card.Image imageUrl={image} width={232} />
+        </Box>
         <Gap size={8}></Gap>
         <Flex justify={'space-between'}>
           <Flex>
