@@ -36,7 +36,7 @@ function CarInfoCard({
           <HeartButton isLiked={isLiked} />
         </Flex>
         <Gap size={8}></Gap>
-        <Box width={248} height={200}>
+        <Box $width={'248px'} $height={'200px'}>
           <Card.Image imageUrl={image} width={232} />
         </Box>
         <Gap size={8}></Gap>

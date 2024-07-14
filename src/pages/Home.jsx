@@ -50,7 +50,7 @@ function Home() {
               <Gap size={32} />
               <CarRentalCard />
               <Gap size={36} />
-              <Box width={'1312'} height={'44'}>
+              <Box $width={'1312px'} $height={'44px'}>
                 <Flex justify={'space-between'}>
                   <Text fontSize={fontSize.m}>Popular Car</Text>
                   <Text fontSize={fontSize.m} color={color.mainBlue}>
@@ -65,13 +65,13 @@ function Home() {
                 })}
               </Flex>
               <Gap size={32} />
-              <Box width={'1312'} height={'44'}>
+              <Box $width={'1312px'} $height={'44px'}>
                 <Flex justify={'space-between'}>
                   <Text fontSize={fontSize.m}>Recomendation Car</Text>
                 </Flex>
               </Box>
               <Gap size={20} />
-              <Box width={'1312'}>
+              <Box $width={'1312px'}>
                 <Flex gap={'32px'} $wrap={'wrap'} align={'center'}>
                   {recommendationCarList.map((car, index) => {
                     return <CarInfoCard key={index} {...car} />;
@@ -79,7 +79,7 @@ function Home() {
                 </Flex>
               </Box>
               <Gap size={64} />
-              <Box width={'1312'}>
+              <Box $width={'1312px'}>
                 <Flex justify={'center'}>
                   <Button width={154}>Show more car</Button>
                   <Text position={'absolute'} right={'0px'} top={'10px'}>

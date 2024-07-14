@@ -16,10 +16,10 @@ import {
 function SearchBar() {
   return (
     <Box
-      width={492}
-      height={44}
-      border={'1px solid rgba(195, 212, 233, 0.4)'}
-      radius={70}
+      $width={'492px'}
+      $height={'44px'}
+      $border={'1px solid rgba(195, 212, 233, 0.4)'}
+      $radius={'70px'}
     >
       <Padding padding={[10, 20]}>
         <Flex align={'center'} justify={'space-between'}>
