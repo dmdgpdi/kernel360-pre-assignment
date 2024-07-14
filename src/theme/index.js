@@ -20,8 +20,11 @@ const color = Object.freeze({
   lightSteel: '#90A3BF',
   slateGray: '#596780',
   darkSlate: ' #1A202C',
+  smoothBlack: '#13131399',
   deepBlack: '#131313',
   alertRed: '#ED3F3F',
+  translucentGray: '#C3D4E966',
+  smoothGray: '#F6F7F9',
 });
 
 const spacing = Object.freeze({
@@ -33,7 +36,8 @@ const spacing = Object.freeze({
   l: 40,
   xl: 44,
   xxl: 48,
-  xxxl: 64,
+  xxxl: 60,
+  xxxxl: 64,
 });
 
 const theme = Object.freeze({
@@ -44,3 +48,4 @@ const theme = Object.freeze({
 });
 
 export { theme, fontSize, fontWeight, color, spacing };
+export { GlobalStyle } from 'theme/GlobalStyle';
