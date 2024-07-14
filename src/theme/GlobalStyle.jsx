@@ -13,6 +13,10 @@ html {
   text-size-adjust: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body,
 h1,
 h2,

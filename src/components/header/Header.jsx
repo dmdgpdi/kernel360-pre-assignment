@@ -1,7 +1,6 @@
 import { color, fontSize, fontWeight } from 'theme';
 import profileImage from 'sources/car1.png';
 import {
-  Card,
   Flex,
   Padding,
   Gap,
@@ -56,7 +55,7 @@ function SearchBar() {
 
 function Header() {
   return (
-    <Container width={1440} height={124}>
+    <Container width={'100vw'} height={'124px'}>
       <Padding padding={[40, 64]}>
         <Flex justify={'space-between'} align={'center'}>
           <Flex align={'center'}>
