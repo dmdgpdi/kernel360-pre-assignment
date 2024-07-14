@@ -61,6 +61,7 @@ function Icon({ type, color = 'black', size = fontSize.xl, isFill = false }) {
   }
 }
 
+// TODO: 추후에 Button.jsx로 이동하기
 const IconWrapperButton = styled.button`
   width: ${(props) =>
     props?.width !== undefined ? `${props.width}px` : 'fit-content'};

@@ -2,7 +2,7 @@ export { Gap } from 'components/~shared/Gap';
 export { Padding } from 'components/~shared/Padding';
 export { Button } from 'components/~shared/Button';
 export { Text } from 'components/~shared/Text';
-export { Icon, IconWrapperButton, HeartButton } from 'components/~shared/icons';
+export { Icon, IconWrapperButton, HeartButton } from 'components/~shared/Icon';
 export { Card } from 'components/~shared/card';
 export { Flex } from 'components/~shared/Flex';
 export { ZIndex } from 'components/~shared/ZIndex';
