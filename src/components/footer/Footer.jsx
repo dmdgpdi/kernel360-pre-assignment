@@ -34,7 +34,7 @@ function NavItemList({ navItemList }) {
 function Footer() {
   return (
     <footer>
-      <Container width={'100vw'} height={'480px'}>
+      <Container $width={'100vw'} $height={'480px'}>
         <Padding padding={[80, 60, 60, 60]}>
           <Flex justify={'space-between'}>
             <Flex direction={'column'}>

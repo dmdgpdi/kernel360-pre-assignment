@@ -40,7 +40,7 @@ function Home() {
     <>
       <Header />
       <main>
-        <Container width={'100vw'} backgroundColor={color.smoothGray}>
+        <Container $width={'100vw'} $backgroundColor={color.smoothGray}>
           <Padding padding={[32, 64, 64, 64]}>
             <Flex direction={'column'} align={'center'}>
               <Flex justify={'center'} gap={'32px'}>

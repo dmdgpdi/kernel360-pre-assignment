@@ -56,7 +56,7 @@ function SearchBar() {
 function Header() {
   return (
     <header>
-      <Container width={'100vw'} height={'124px'}>
+      <Container $width={'100vw'} $height={'124px'}>
         <Padding padding={[40, 64]}>
           <Flex justify={'space-between'} align={'center'}>
             <Flex align={'center'}>
