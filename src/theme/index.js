@@ -24,6 +24,7 @@ const color = Object.freeze({
   deepBlack: '#131313',
   alertRed: '#ED3F3F',
   translucentGray: '#C3D4E966',
+  smoothGray: '#F6F7F9',
 });
 
 const spacing = Object.freeze({
