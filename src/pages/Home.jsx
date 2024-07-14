@@ -39,56 +39,58 @@ function Home() {
   return (
     <>
       <Header />
-      <Container width={'100vw'} backgroundColor={color.smoothGray}>
-        <Padding padding={[32, 64, 64, 64]}>
-          <Flex direction={'column'} align={'center'}>
-            <Flex justify={'center'} gap={'32px'}>
-              <CarBannerCard {...skyBlueBanner} />
-              <CarBannerCard {...mainBlueBanner} />
-            </Flex>
-            <Gap size={32} />
-            <CarRentalCard />
-            <Gap size={36} />
-            <Box width={'1312'} height={'44'}>
-              <Flex justify={'space-between'}>
-                <Text fontSize={fontSize.m}>Popular Car</Text>
-                <Text fontSize={fontSize.m} color={color.mainBlue}>
-                  View All
-                </Text>
+      <main>
+        <Container width={'100vw'} backgroundColor={color.smoothGray}>
+          <Padding padding={[32, 64, 64, 64]}>
+            <Flex direction={'column'} align={'center'}>
+              <Flex justify={'center'} gap={'32px'}>
+                <CarBannerCard {...skyBlueBanner} />
+                <CarBannerCard {...mainBlueBanner} />
               </Flex>
-            </Box>
-            <Gap size={20} />
-            <Flex gap={'32px'}>
-              {popularCarList.map((car, index) => {
-                return <CarInfoCard key={index} {...car} />;
-              })}
-            </Flex>
-            <Gap size={32} />
-            <Box width={'1312'} height={'44'}>
-              <Flex justify={'space-between'}>
-                <Text fontSize={fontSize.m}>Recomendation Car</Text>
-              </Flex>
-            </Box>
-            <Gap size={20} />
-            <Box width={'1312'}>
-              <Flex gap={'32px'} $wrap={'wrap'} align={'center'}>
-                {recommendationCarList.map((car, index) => {
+              <Gap size={32} />
+              <CarRentalCard />
+              <Gap size={36} />
+              <Box width={'1312'} height={'44'}>
+                <Flex justify={'space-between'}>
+                  <Text fontSize={fontSize.m}>Popular Car</Text>
+                  <Text fontSize={fontSize.m} color={color.mainBlue}>
+                    View All
+                  </Text>
+                </Flex>
+              </Box>
+              <Gap size={20} />
+              <Flex gap={'32px'}>
+                {popularCarList.map((car, index) => {
                   return <CarInfoCard key={index} {...car} />;
                 })}
               </Flex>
-            </Box>
-            <Gap size={64} />
-            <Box width={'1312'}>
-              <Flex justify={'center'}>
-                <Button width={154}>Show more car</Button>
-                <Text position={'absolute'} right={'0px'} top={'10px'}>
-                  120 Car
-                </Text>
-              </Flex>
-            </Box>
-          </Flex>
-        </Padding>
-      </Container>
+              <Gap size={32} />
+              <Box width={'1312'} height={'44'}>
+                <Flex justify={'space-between'}>
+                  <Text fontSize={fontSize.m}>Recomendation Car</Text>
+                </Flex>
+              </Box>
+              <Gap size={20} />
+              <Box width={'1312'}>
+                <Flex gap={'32px'} $wrap={'wrap'} align={'center'}>
+                  {recommendationCarList.map((car, index) => {
+                    return <CarInfoCard key={index} {...car} />;
+                  })}
+                </Flex>
+              </Box>
+              <Gap size={64} />
+              <Box width={'1312'}>
+                <Flex justify={'center'}>
+                  <Button width={154}>Show more car</Button>
+                  <Text position={'absolute'} right={'0px'} top={'10px'}>
+                    120 Car
+                  </Text>
+                </Flex>
+              </Box>
+            </Flex>
+          </Padding>
+        </Container>
+      </main>
       <Footer />
     </>
   );

@@ -33,69 +33,71 @@ function NavItemList({ navItemList }) {
 
 function Footer() {
   return (
-    <Container width={'100vw'} height={'480px'}>
-      <Padding padding={[80, 60, 60, 60]}>
-        <Flex justify={'space-between'}>
-          <Flex direction={'column'}>
-            <Text color={color.mainBlue} fontSize={fontSize.xxl}>
-              KernelRent
-            </Text>
-            <Gap size={spacing.xxxs} />
-            <Text fontSize={fontSize.m} width={292}>
-              Our vision is to provide convenience and help increase your sales
-              business.
-            </Text>
-          </Flex>
-          <nav>
-            <Flex gap={'60px'}>
-              {Object.entries(navObject).map(([key, value]) => {
-                return (
-                  <div key={key}>
-                    <Text
-                      color={color.deepBlack}
-                      fontSize={fontSize.l}
-                      fontWeight={fontWeight.medium}
-                    >
-                      {key}
-                    </Text>
-                    <Gap size={spacing.xs} />
-                    <NavItemList navItemList={value} />
-                  </div>
-                );
-              })}
+    <footer>
+      <Container width={'100vw'} height={'480px'}>
+        <Padding padding={[80, 60, 60, 60]}>
+          <Flex justify={'space-between'}>
+            <Flex direction={'column'}>
+              <Text color={color.mainBlue} fontSize={fontSize.xxl}>
+                KernelRent
+              </Text>
+              <Gap size={spacing.xxxs} />
+              <Text fontSize={fontSize.m} width={292}>
+                Our vision is to provide convenience and help increase your
+                sales business.
+              </Text>
             </Flex>
-          </nav>
-        </Flex>
-        <Gap size={spacing.m} />
-        <Divider />
-        <Gap size={spacing.m} />
-        <Flex justify={'space-between'}>
-          <Text
-            color={color.darkSlate}
-            fontSize={fontSize.m}
-            fontWeight={fontWeight.medium}
-          >
-            ©2024 KernelRent. All rights reserved
-          </Text>
-          <Flex gap={'60px'}>
-            <Text
-              color={color.darkSlate}
-              fontSize={fontSize.m}
-              fontWeight={fontWeight.medium}
-            >
-              Privacy & Policy
-            </Text>
-            <Text
-              color={color.darkSlate}
-              fontSize={fontSize.m}
-              fontWeight={fontWeight.medium}
-            >
-              Terms & Condition
-            </Text>
+            <nav>
+              <Flex gap={'60px'}>
+                {Object.entries(navObject).map(([key, value]) => {
+                  return (
+                    <div key={key}>
+                      <Text
+                        color={color.deepBlack}
+                        fontSize={fontSize.l}
+                        fontWeight={fontWeight.medium}
+                      >
+                        {key}
+                      </Text>
+                      <Gap size={spacing.xs} />
+                      <NavItemList navItemList={value} />
+                    </div>
+                  );
+                })}
+              </Flex>
+            </nav>
           </Flex>
-        </Flex>
-      </Padding>
-    </Container>
+          <Gap size={spacing.m} />
+          <Divider />
+          <Gap size={spacing.m} />
+          <Flex justify={'space-between'}>
+            <Text
+              color={color.darkSlate}
+              fontSize={fontSize.m}
+              fontWeight={fontWeight.medium}
+            >
+              ©2024 KernelRent. All rights reserved
+            </Text>
+            <Flex gap={'60px'}>
+              <Text
+                color={color.darkSlate}
+                fontSize={fontSize.m}
+                fontWeight={fontWeight.medium}
+              >
+                Privacy & Policy
+              </Text>
+              <Text
+                color={color.darkSlate}
+                fontSize={fontSize.m}
+                fontWeight={fontWeight.medium}
+              >
+                Terms & Condition
+              </Text>
+            </Flex>
+          </Flex>
+        </Padding>
+      </Container>
+    </footer>
   );
 }
 
