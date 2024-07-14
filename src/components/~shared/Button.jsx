@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  display: ${(props) => props?.display ?? 'start'};
+  display: ${(props) => props?.display ?? 'block'};
   justify-content: ${(props) => props?.justify ?? 'start'};
   align-items: ${(props) => props?.align ?? 'start'};
   width: ${(props) => props?.width ?? 116}px;

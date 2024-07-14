@@ -9,8 +9,21 @@ const CardLayout = styled.div`
   width: ${(props) => props?.width ?? 304}px;
   height: ${(props) => props?.height ?? 388}px;
   border-radius: 10px;
-  background-color: ${(props) => props?.backgroundColor ?? color.pureWhite};
+  background-color: ${(props) => props.backgroundColor ?? color.pureWhite};
 `;
+
+function CardComponent({ width, height, backgroundColor, children, ...props }) {
+  return (
+    <CardLayout
+      width={width}
+      height={height}
+      backgroundColor={backgroundColor}
+      {...props}
+    >
+      {children}
+    </CardLayout>
+  );
+}
 
 const CardTitle = styled.p`
   width: ${(props) =>
@@ -29,12 +42,10 @@ const CardTitle = styled.p`
 const CardImageLayout = styled.img`
   margin: auto;
   position: ${(props) => (props.isBackground ? 'absolute' : 'relative')};
-  top: ${(props) => (props?.top !== undefined ? `${props.top}px` : 'auto')};
-  bottom: ${(props) =>
-    props?.bottom !== undefined ? `${props.bottom}px` : 'auto'};
-  left: ${(props) => (props?.left !== undefined ? `${props.left}px` : 'auto')};
-  right: ${(props) =>
-    props?.right !== undefined ? `${props.right}px` : 'auto'};
+  top: ${(props) => (props.top ? props.top : 'auto')};
+  bottom: ${(props) => (props.bottom ? props.bottom : 'auto')};
+  left: ${(props) => (props.left ? props.left : 'auto')};
+  right: ${(props) => (props.right ? props.right : 'auto')};
 `;
 
 function CardImage({ imageUrl, alt, width, ...props }) {
@@ -43,7 +54,7 @@ function CardImage({ imageUrl, alt, width, ...props }) {
   );
 }
 
-const Card = Object.assign(CardLayout, {
+const Card = Object.assign(CardComponent, {
   Title: CardTitle,
   Image: CardImage,
 });

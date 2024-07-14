@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 const Text = styled.span`
+  position: ${(props) => props?.position ?? 'relative'};
+  top: ${(props) => (props.top ? props.top : 'auto')};
+  bottom: ${(props) => (props.bottom ? props.bottom : 'auto')};
+  left: ${(props) => (props.left ? props.left : 'auto')};
+  right: ${(props) => (props.right ? props.right : 'auto')};
   display: block;
   width: ${(props) =>
     props?.width !== undefined ? `${props.width}px` : 'fit-content'};

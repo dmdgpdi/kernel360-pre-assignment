@@ -9,7 +9,7 @@ const Box = styled.div`
     props?.height !== undefined ? `${props.height}px` : 'auto'};
   border: ${(props) => props?.border ?? 'none'};
   border-radius: ${(props) => props?.radius ?? 0}px;
-  background-color: ${(props) => props?.backgroundColor ?? color.pureWhite};
+  background-color: ${(props) => props?.backgroundColor ?? 'transparent'};
   color: ${(props) => props?.color ?? props.theme.color.darkSlate};
   text-align: ${(props) => props?.textAlign ?? 'start'};
 `;
